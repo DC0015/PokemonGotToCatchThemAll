@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
+    
+    <!--<script src="js/cordovaVibrationModule.min.js"></script>-->
+    <script>
+	var app = angular.module('starter', ['ionic', 'starter.controllers'/*, 'Cordova'*/])
+	
+	app.config(function($stateProvider, $urlRouterProvider) {
+		$urlRouterProvider.otherwise('/')
+		
+		// hier geef je aan welke pagina wanneer geactiveerd moet worden en of een controller aan de pagina gekoppeld moet worden -->
+		$stateProvider
+		.state('home', {
+			url: '/',
+			templateUrl: 'home.html'
+		})
+		.state('starter', {
+			url: '/',
+			templateUrl: 'starter.html'
+		})
+		.state('pokedex', {
+			url: '/',
+			templateUrl: 'pokedex.html',
+			controller: 'pokedexCtrl'
+		})
+	})
+	</script>
+  </head>
+  <body ng-app="starter">
+  <!-- hier staat de header. Deze blijft op iedere pagina staan. -->
+  <ion-header-bar class="bar-stable">
+     <img src="img/actionbar.png" width="100%" height="100%" />
+      </ion-header-bar>
+	<!--<ion-nav-bar class="bar-energized nav-title-slide-ios7">
+    <ion-nav-back-button class="button-clear">
+    <i class="ion-arrow-left-c"></i>Back
+    </ion-nav-back-button>
+    </ion-nav-bar>-->
+    <!--<div class="buttons">
+    <button class="button button-icon icon ion-star"></button>
+    </div>-->
+    <ion-nav-view></ion-nav-view>
+   
+   <!-- hier voeg je elke keer een nieuw script toe waar de content van de pagina in staat. -->
+   <script id='home.html' type="text/ng-template">
+   <ion-view title="Our Awesome Header">
+   
+   <ion-content>
+   </ion-content>
+   <div class="bar bar-footer">
+      <div id="pijlFooter">
+      <a ui-sref="starter"><img id="open" src="img/pijlEnBalk.png" width="100%" height="100%"></a>
+      </div>
+   </ion-view>
+   </script>
+   
+   <script id='starter.html' type='text/ng-template'>
+   <ion-view title="Detail Page">
+   <ion-content>
+    <div class="list">
+
+  <div class="item item-divider">
+    Starter Pokemon
+  </div>
+<div class="border">
+  <a class="item" onclick="selectStarter(this, '#b8b8b8')" id="bulba" href="#">
+  <img src="img/bulba.png" />
+    <span id="starter">001: Bulbasaur<br />
+    Type: Grass/Poison</span>
+  </a>
+  <a class="item" onclick="selectStarter(this, '#b8b8b8')" id="char" href="#">
+  <img src="img/char.png" />
+    <span id="starter">004: Charmander<br />
+    Type: Fire</span>
+  </a>
+	<a class="item" onclick="selectStarter(this, '#b8b8b8')"  id="squirt" href="#">
+    <img src="img/squirt.png" />
+    <span id="starter">007: Squirtle<br />
+    Type: Water</span>
+  </a>
+  <a class="item" onclick="selectStarter(this, '#b8b8b8')" id="cat" href="#">
+    <img src="img/cat.png" />
+    <span id="starter">010: Caterpie<br />
+    Type: Bug</span>
+  </a>
+  <a class="item" onclick="selectStarter(this, '#b8b8b8')" id="weed" href="#">
+    <img src="img/weed.png" />
+    <span id="starter">013: Weedle<br />
+    Type: Bug/Poison</span>
+  </a>
+  <a class="item" onclick="selectStarter(this, '#b8b8b8')" id="pid" href="#">
+    <img  src="img/pid.png" />
+    <span id="starter">016: Pidgey<br />
+    Type: Normal/Flying</span>
+  </a>
+ </div> 
+</div>
+<!--<div class="zButton">-->
+<!-- link naar de pokedex pagina. Als je wilt linken naar een andere pagina dan doen je dat zo.-->
+<a ui-sref='pokedex'>
+<button id="button" class="button button icon icon ion-chevron-right" ></button>
+</a>
+<!--</div>-->
+   </ion-content>
+   </ion-view>
+   </script>
+   
+   <script id='pokedex.html' type='text/ng-template'>
+     <ion-view title="Pokédex">
+   <ion-content>
+	<div class="list">
+
+  <div class="item item-divider">
+    Pokédex
+  </div>
+<div class="border">
+  <a class="item" href="#" id='bulba'>
+  <img src="img/bulba.png" />
+    <span id="starter">001: Bulbasaur<br />
+    Type: Grass/Poison</span>
+	<img id="caughtBulba" class="caught" src="img/pokeball.png">
+  </a>
+  <a class="item" href="#">
+  <img src="img/ivy.png" />
+    <span id="starter">002: Ivysaur<br />
+    Type: Grass/Poison</span>
+  </a>
+  <a class="item" href="#">
+  <img src="img/venu.png" />
+    <span id="starter">003: Venusaur<br />
+    Type: Grass/Poison</span>
+  </a>
+  <a class="item" href="#" id='char'>
+  <img src="img/char.png" />
+    <span id="starter">004: Charmander<br />
+    Type: Fire</span>
+	<img id="caughtChar" class="caught" src="img/pokeball.png">
+  </a>
+  <a class="item" href="#">
+  <img src="img/charm.png" />
+    <span id="starter">005: Charmeleon<br />
+    Type: Fire</span>
+  </a>
+  <a class="item" href="#">
+  <img src="img/chari.png" />
+    <span id="starter">006: Charizard<br />
+    Type: Fire/Flying</span>
+  </a>
+	<a class="item" href="#" id='squirt'>
+    <img src="img/squirt.png" />
+    <span id="starter">007: Squirtle<br />
+    Type: Water</span>
+	<img id="caughtSquirt" class="caught" src="img/pokeball.png">
+  </a>
+  <a class="item" href="#">
+    <img src="img/war.png" />
+    <span id="starter">008: Wartortle<br />
+    Type: Water</span>
+  </a>
+  <a class="item" href="#">
+    <img src="img/blast.png" />
+    <span id="starter">009: Blastoise<br />
+    Type: Water</span>
+  </a>
+  <a class="item" href="#" id='cat'>
+    <img src="img/cat.png" />
+    <span id="starter">010: Caterpie<br />
+    Type: Bug</span>
+	<img id="caughtCat" class="caught" src="img/pokeball.png">
+  </a>
+ </div> 
+</div>
+</ion-content>
+   </ion-view>
+   </script>
+  </body>
+</html>

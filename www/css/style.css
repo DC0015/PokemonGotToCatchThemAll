@@ -1,0 +1,92 @@
+/* Empty. Add your own CSS if you like */
+ion-view.pane
+{
+	/*height:100%;*/
+	/*width: 100%;
+	padding: 0;
+	margin: 0;*/
+	background-color: #BE1212;
+}
+ion-header-bar.bar
+{
+	padding: 0px;
+}
+.bar.bar-stable
+{
+	background-color:#BE1212;
+}
+div.bar
+{
+	background-color: #BE1212;
+}
+div#pijlFooter
+{
+	background-color:#BE1212;
+}
+.list
+{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.border
+{
+	border-left: 10px solid #ffffff;
+	border-right: 10px solid #ffffff;
+	border-bottom: 10px solid #ffffff;
+}
+.item
+{
+	background-color: #78D0E8;
+}
+.item-divider
+{
+	background-color: #F5F5F5;
+}
+span#starter
+{
+	margin-left: 5%;
+	/*position:relative;
+	top: -100%;*/
+	position:absolute;
+	top: 30%;
+}
+button#button
+{
+	visibility:hidden;
+	float: right;
+	margin-bottom: 5%;
+	margin-right: 5%;
+	background-color: #BE1212;
+	border: none;
+}
+img.caught
+{
+	/*float:right;*/
+	position:absolute;
+	top: 30%;
+	margin-left: 50%;
+	visibility:hidden;
+}
+#caughtBulba
+{
+	visibility:hidden;
+}
+#caughtChar
+{
+	visibility:hidden;
+}
+#caughtSquirt
+{
+	visibility:hidden;
+}
+#caughtCat
+{
+	visibility:hidden;
+}
+div#zButton
+{
+	margin-top: -100px;
+	z-index: 1px;
+	background-color:#BE1212;
+}
