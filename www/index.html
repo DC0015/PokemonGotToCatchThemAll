@@ -46,10 +46,9 @@
 			templateUrl: 'pokedex.html',
 			controller: 'pokedexCtrl'
 		})
-    .state('fight', {
+    .state('battle', {
       url: '/',
-      templateUrl: 'fight.html',
-      controller: 'fight.html'
+      templateUrl: 'battle.html',
     })
 	})
 	</script>
@@ -57,7 +56,13 @@
   <body ng-app="starter">
   <!-- hier staat de header. Deze blijft op iedere pagina staan. -->
   <ion-header-bar class="bar-stable">
-     <img id="actionbarHeader" src="img/actionbar.png" />
+     
+     <div id="actionbarHeader">
+      <a ui-sref='battle'><div id="actionBattle"></div></a>
+      <a ui-sref='pokedex'><div id="actionBag"></div></a>
+      <a ui-sref='pokedex'><div id="actionDex"></div></a>
+     </div>
+
       </ion-header-bar>
 	<!--<ion-nav-bar class="bar-energized nav-title-slide-ios7">
     <ion-nav-back-button class="button-clear">
@@ -72,7 +77,7 @@
    <!-- hier voeg je elke keer een nieuw script toe waar de content van de pagina in staat. -->
    <script id='home.html' type="text/ng-template">
    <ion-view title="Our Awesome Header">
-   <div id="startbg" type="button" on-swipe-up="swipeUP">test</div>
+   <div id="startbg" type="button" on-swipe-up="startSwipe()"></div>
    
      <ion-content>
       
@@ -205,5 +210,17 @@
 </ion-content>
    </ion-view>
    </script>
+
+  <script id='battle.html' type='text/ng-template'>
+    <ion-view title="Battle">
+          <div id="battlescreen">
+              <a ><div id="run"></div></a>
+              <a ><div id="bag"></div></a>
+              <a ><div id="fight"></div></a>
+          </div>
+      <ion-content>
+      </ion-content>
+    </ion-view>
+  </script>
   </body>
 </html>

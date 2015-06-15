@@ -6,7 +6,7 @@ ion-view.pane
 	/*width: 100%;
 	padding: 0;
 	margin: 0;*/
-	/*background-color: #BE1212;*/
+	background-color: #BE1212;
 }
 ion-header-bar.bar
 {
@@ -14,8 +14,38 @@ ion-header-bar.bar
 }
 #actionbarHeader
 {
+	background-image: url("../img/actionbar.png");
+	background-repeat: no-repeat;
+	background-size: cover;
 	width: 100%;
 	height: 75px;
+	z-index: 0px;
+}
+#actionBattle
+{
+	height: 59%;
+	width: 13%;
+	background-color: blue;
+	float: right;
+	z-index: 50px;
+}
+#actionBag
+{
+	height: 59%;
+	width: 13%;
+	background-color: yellow;
+	float: right;
+	z-index: 50px;
+	margin-right: 4px;
+}
+#actionDex
+{
+	height: 59%;
+	width: 13%;
+	background-color: green;
+	float: right;
+	z-index: 50px;
+	margin-right: 4px;
 }
 .bar.bar-stable
 {
@@ -122,4 +152,45 @@ div#zButton
 	margin-top: -100px;
 	z-index: 1px;
 	background-color:#BE1212;
+}
+
+/*BATTLE SCREEN*/
+#battlescreen
+{
+	background-image: url("../img/battle.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	/*background-color: green;*/
+	width: 100%;
+	height: 100%;
+	margin-top: 100px;
+	margin-bottom: 10px;
+
+}
+#run
+{
+	width: 45%;
+	height: 15%;
+	background-color: yellow;
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+}
+#bag
+{
+	width: 45%;
+	height: 15%;
+	background-color: yellow;
+	position: absolute;
+	bottom: 15px;
+	left: 13px;
+}
+#fight
+{
+	width: 95%;
+	height: 20%;
+	background-color: blue;
+	position: absolute;
+	bottom: 117px;
+	left: 10px;
 }
