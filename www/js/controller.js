@@ -59,7 +59,9 @@ angular.module('starter.controllers', [])
 		document.getElementById('caughtCat').style.visibility = 'visible';
 	}
 
-
+/*	$scope.swipeUP = function () {
+	  alert("test");
+	};*/
 	
 	$timeout (
 	function() {
@@ -81,4 +83,4 @@ angular.module('starter.controllers', [])
 			}]
 			}); }, 5000);
 		
-	});
+});
