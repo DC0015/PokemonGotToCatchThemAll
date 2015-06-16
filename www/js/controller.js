@@ -84,3 +84,10 @@ angular.module('starter.controllers', [])
 			}); }, 5000);
 		
 });
+
+/*function MyCtrl($scope, $ionicHistory) {
+  $scope.myGoBack = function() {
+    $ionicHistory.goBack();
+  };
+}
+*/
