@@ -12,6 +12,19 @@ ion-header-bar.bar
 {
 	padding: 0px;
 }
+
+.scrWrapper
+{
+	background-color: yellow;
+	width: 100%;
+	height: 100%;
+	margin-top: 70px;
+/*	position: absolute;*/
+/*	overflow-y: hidden;*/
+}
+
+
+/*ACTION BAR*/
 #actionbarHeader
 {
 	background-image: url("../img/actionbar.png");
@@ -25,15 +38,16 @@ ion-header-bar.bar
 {
 	height: 59%;
 	width: 13%;
-	background-color: blue;
+	/*background-color: blue;*/
 	float: right;
 	z-index: 50px;
+	margin-right: 4px;
 }
 #actionBag
 {
 	height: 59%;
 	width: 13%;
-	background-color: yellow;
+	/*background-color: yellow;*/
 	float: right;
 	z-index: 50px;
 	margin-right: 4px;
@@ -42,7 +56,7 @@ ion-header-bar.bar
 {
 	height: 59%;
 	width: 13%;
-	background-color: green;
+	/*background-color: green;*/
 	float: right;
 	z-index: 50px;
 	margin-right: 4px;
@@ -55,6 +69,12 @@ div.bar
 {
 	background-color: #BE1212;
 }
+
+
+
+
+
+
 #startbg
 {
 	background-image: url("../img/Pokedex-dylan.png");
@@ -70,7 +90,7 @@ div#pijlFooter
     /*replace 900px with your width*/
 	width:100%;
 }
-#startbutton
+
 img#open
 {
 	width: 100%;
@@ -88,9 +108,11 @@ img#open
 .list
 {
 	width: 90%;
+/*	height:80%;*/
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 50px;
+/*	overflow-y: auto;*/
+	/*padding-top: 50px;*/
 }
 .border
 {
@@ -147,7 +169,7 @@ img.caught
 {
 	visibility:hidden;
 }
-div#zButton
+div.zButton
 {
 	margin-top: -100px;
 	z-index: 1px;
@@ -171,7 +193,7 @@ div#zButton
 {
 	width: 45%;
 	height: 15%;
-	background-color: yellow;
+	/*background-color: yellow;*/
 	position: absolute;
 	bottom: 15px;
 	right: 15px;
@@ -180,7 +202,7 @@ div#zButton
 {
 	width: 45%;
 	height: 15%;
-	background-color: yellow;
+	/*background-color: yellow;*/
 	position: absolute;
 	bottom: 15px;
 	left: 13px;
@@ -189,7 +211,7 @@ div#zButton
 {
 	width: 95%;
 	height: 20%;
-	background-color: blue;
+	/*background-color: blue;*/
 	position: absolute;
 	bottom: 117px;
 	left: 10px;

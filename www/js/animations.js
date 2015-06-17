@@ -1,6 +1,6 @@
-$("document").ready(function{
+$(document).ready(function(){
 
-	function startSwipe(){
+	/*function startSwipe(){
 		
 		$("#startbg").animate({
 		    opacity: 0.25,
@@ -12,6 +12,5 @@ $("document").ready(function{
 	
 	function goBack() {
     	window.history.back();
-	}
-
+	}*/
 });

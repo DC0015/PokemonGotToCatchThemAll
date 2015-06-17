@@ -79,7 +79,7 @@ angular.module('starter.controllers', [])
 			subTitle: 'A wild Pokémon appeared',
 			buttons: 
 			[{
-				text: 'OK'
+				text: 'Battle'
 			}]
 			}); }, 5000);
 		
