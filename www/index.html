@@ -49,7 +49,8 @@
     .state('battle', {
       url: '/',
       templateUrl: 'battle.html',
-    })
+	  //controller: 'battleCtrl'
+	})
 	})
 	</script>
   </head>
@@ -150,6 +151,7 @@
   <div class="item item-divider">
     Pokédex
   </div>
+  <p id="geolocation">Finding geolocation...</p>
 <div class="border">
   <a class="item" href="#" id='bulba'>
   <img src="img/bulba.png" />
@@ -214,7 +216,7 @@
   <script id='battle.html' type='text/ng-template'>
     <ion-view title="Battle">
           <div id="battlescreen">
-              <a ><div id="run"></div></a>
+              <a ><div id="run" onclick="myGoBack()" ></div></a>
               <a ><div id="bag"></div></a>
               <a ><div id="fight"></div></a>
           </div>
